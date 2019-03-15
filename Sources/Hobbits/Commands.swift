@@ -12,7 +12,7 @@ enum Commands: UInt8 {
 
 extension Commands {
 
-    init?(command: String) {
+    init?(_ command: String) {
         switch (command) {
         case "Hello":
             self = .hello
