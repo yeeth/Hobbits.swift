@@ -14,19 +14,19 @@ extension Command {
 
     init?(_ command: String) {
         switch (command) {
-        case "Hello":
+        case "HELLO":
             self = .hello
-        case "Request block root":
+        case "REQUEST_BLOCK_ROOT":
             self = .requestBlockRoot
-        case "Send block root":
+        case "SEND_BLOCK_ROOT":
             self = .sendBlockRoot
-        case "Request block header":
+        case "REQUEST_BLOCK_HEADER":
             self = .requestBlockHeader
-        case "Send block header":
+        case "SEND_BLOCK_HEADER":
             self = .sendBlockHeader
-        case "Request block body":
+        case "REQUEST_BLOCK_BODY":
             self = .requestBlockBody
-        case "Send block body":
+        case "SEND_BLOCK_BODY":
             self = .sendBlockBody
         default:
             return nil
