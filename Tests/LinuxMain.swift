@@ -1,7 +1,7 @@
 import XCTest
 
-import Hobbit_swiftTests
+import HobbitsTests
 
 var tests = [XCTestCaseEntry]()
-tests += Hobbit_swiftTests.allTests()
+tests += HobbitsTests.allTests()
 XCTMain(tests)
