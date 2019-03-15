@@ -9,3 +9,28 @@ enum Commands: UInt8 {
     case requestBlockBody = 0x14
     case sendBlockBody = 0x15
 }
+
+extension Commands {
+
+    init?(command: String) {
+        switch (command) {
+        case "Hello":
+            self = .hello
+        case "Request block root":
+            self = .requestBlockRoot
+        case "Send block root":
+            self = .sendBlockRoot
+        case "Request block header":
+            self = .requestBlockHeader
+        case "Send block header":
+            self = .sendBlockHeader
+        case "Request block body":
+            self = .requestBlockBody
+        case "Send block body":
+            self = .sendBlockBody
+        default:
+            return nil
+        }
+    }
+
+}
