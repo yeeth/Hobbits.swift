@@ -2,7 +2,7 @@ import Foundation
 
 public struct Request {
     let version: String
-    let command: String
+    let command: Command
     let compression: String
     let responseCompression: [String]
     let headOnlyIndicator: Bool

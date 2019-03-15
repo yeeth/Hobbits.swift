@@ -1,6 +1,6 @@
 import Foundation
 
-enum Commands: UInt8 {
+enum Command: UInt8 {
     case hello = 0x00
     case requestBlockRoot = 0x10
     case sendBlockRoot = 0x11
@@ -10,7 +10,7 @@ enum Commands: UInt8 {
     case sendBlockBody = 0x15
 }
 
-extension Commands {
+extension Command {
 
     init?(_ command: String) {
         switch (command) {
