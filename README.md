@@ -1,4 +1,4 @@
-# Hobbit.swift
+# Hobbits.swift
 
 [![Build Status](https://travis-ci.com/yeeth/Hobbit.swift.svg?branch=master)](https://travis-ci.com/yeeth/Hobbit.swift) [![License](https://img.shields.io/github/license/yeeth/Hobbit.swift.svg)](LICENSE)
 
