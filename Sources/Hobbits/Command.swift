@@ -2,7 +2,7 @@ import Foundation
 
 // @todo remove send*, they aren't commands
 
-enum Command: UInt8 {
+public enum Command: UInt8 {
     case hello = 0x00
     case requestBlockRoot = 0x10
     case sendBlockRoot = 0x11
@@ -12,7 +12,7 @@ enum Command: UInt8 {
     case sendBlockBody = 0x15
 }
 
-extension Command: CustomStringConvertible {
+public extension Command: CustomStringConvertible {
 
     var description: String {
         switch self {
@@ -34,7 +34,7 @@ extension Command: CustomStringConvertible {
     }
 }
 
-extension Command {
+public extension Command {
 
     init?(_ command: String) {
         switch (command) {
@@ -56,5 +56,4 @@ extension Command {
             return nil
         }
     }
-
 }
