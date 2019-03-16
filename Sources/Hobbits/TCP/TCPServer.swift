@@ -16,6 +16,14 @@ extension TCPServer: NetServiceDelegate {
         didAcceptConnectionWith inputStream: InputStream,
         outputStream: OutputStream
     ) {
+        let connection = TCPConnection(input: input, output: outputStream)
+        // @todo handle connection
+    }
+}
 
+extension TCPServer {
+
+    func handle(connection: TCPConnection) {
+        
     }
 }

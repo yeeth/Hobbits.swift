@@ -3,8 +3,13 @@ import Foundation
 class TCPConnection {
 
     // @todo not sure if this is the way to go yet
-    fileprivate var input: InputStream?
-    fileprivate var output: OutputStream?
+    fileprivate var input: InputStream
+    fileprivate var output: OutputStream
+
+    init(input: InputStream, output: OutputStream) {
+        self.input = input
+        self.output = output
+    }
 
     func read(length: Int) -> [UInt8] {
         if length == 0 {
