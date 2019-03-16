@@ -10,7 +10,7 @@ public struct Request {
     let body: [UInt8]
 }
 
-extension Request {
+public extension Request {
 
     init(serializedData input: String) throws {
         var result = input.split(separator: "\n")
@@ -38,7 +38,7 @@ extension Request {
         compression = String(r[3])
         responseCompression = String(r[4]).split(separator: ",").map { return String($0) }
         headOnlyIndicator = String(r[7]) == "H"
-        headers = [UInt8](payload.substring(start: 0, end: headersLength).utf8)
-        body = [UInt8](payload.substring(start: headersLength, end: bodyLength).utf8)
+        headers = payload.substring(start: 0, end: headersLength).bytes
+        body = payload.substring(start: headersLength, end: bodyLength).bytes
     }
 }
