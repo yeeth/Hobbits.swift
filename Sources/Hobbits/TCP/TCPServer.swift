@@ -1,6 +1,6 @@
 import Foundation
 
-class TCPServer {
+class TCPServer: NSObject {
 
     func start() {
         let service = NetService(domain: "", type: "", name: "")
