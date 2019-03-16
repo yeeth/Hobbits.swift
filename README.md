@@ -14,7 +14,7 @@ The `Hobbits.swift` package can be easily imported into your project using the `
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yeeth/Hobbits.swift.git", from: "0.1.0"),
+    .package(url: "https://github.com/yeeth/Hobbits.swift.git", from: "1.0.0"),
 ],
 targets: [
     .target(name: "MyTarget", dependencies: ["Hobbits"]),
