@@ -16,6 +16,7 @@ final class ParserTests: XCTestCase {
         XCTAssertEqual(parsed.responseCompression, ["none"])
         XCTAssertEqual(parsed.headers, [])
         XCTAssertFalse(parsed.headOnlyIndicator)
+        XCTAssertEqual(request, String(describing: parsed))
     }
 
     static var allTests = [

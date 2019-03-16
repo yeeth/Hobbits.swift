@@ -10,6 +10,25 @@ enum Command: UInt8 {
     case sendBlockHeader = 0x13
     case requestBlockBody = 0x14
     case sendBlockBody = 0x15
+
+    static func toString(command: Command) -> String {
+        switch (command) {
+        case .hello:
+            return "HELLO"
+        case .requestBlockRoot:
+            return "REQUEST_BLOCK_ROOT"
+        case .sendBlockRoot:
+            return "SEND_BLOCK_ROOT"
+        case .requestBlockHeader:
+            return "REQUEST_BLOCK_HEADER"
+        case .sendBlockHeader:
+            return "SEND_BLOCK_HEADER"
+        case .requestBlockBody:
+            return "REQUEST_BLOCK_BODY"
+        case .sendBlockBody:
+            return "SEND_BLOCK_BODY"
+        }
+    }
 }
 
 extension Command {
