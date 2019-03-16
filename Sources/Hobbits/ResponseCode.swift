@@ -1,6 +1,6 @@
 import Foundation
 
-enum ResponseCode: UInt16 {
+public enum ResponseCode: UInt16 {
     case ok = 200
     case badRequest = 400
     case forbidden = 403

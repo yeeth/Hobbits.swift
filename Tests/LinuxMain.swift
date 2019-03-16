@@ -3,5 +3,5 @@ import XCTest
 import HobbitsTests
 
 var tests = [XCTestCaseEntry]()
-tests += HobbitsTests.allTests()
+tests += RequestTests.allTests()
 XCTMain(tests)
