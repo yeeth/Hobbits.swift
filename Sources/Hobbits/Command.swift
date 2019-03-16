@@ -12,27 +12,48 @@ public enum Command: UInt8 {
     case sendBlockBody = 0x15
 }
 
+public extension Command: CustomStringConvertible {
+
+    var description: String {
+        switch self {
+        case .hello:
+            return "HELLO"
+        case .requestBlockRoot:
+            return "REQUEST_BLOCK_ROOT"
+        case .sendBlockRoot:
+            return "SEND_BLOCK_ROOT"
+        case .requestBlockHeader:
+            return "REQUEST_BLOCK_HEADER"
+        case .sendBlockHeader:
+            return "SEND_BLOCK_HEADER"
+        case .requestBlockBody:
+            return "REQUEST_BLOCK_BODY"
+        case .sendBlockBody:
+            return "SEND_BLOCK_BODY"
+        }
+    }
+}
+
 public extension Command {
 
     init?(_ command: String) {
         switch (command) {
-        case "HELLO":
+        case "\(Command.hello)":
             self = .hello
-        case "REQUEST_BLOCK_ROOT":
+        case "\(Command.requestBlockRoot)":
             self = .requestBlockRoot
-        case "SEND_BLOCK_ROOT":
+        case "\(Command.sendBlockRoot)":
             self = .sendBlockRoot
-        case "REQUEST_BLOCK_HEADER":
+        case "\(Command.requestBlockHeader)":
             self = .requestBlockHeader
-        case "SEND_BLOCK_HEADER":
+        case "\(Command.sendBlockHeader)":
             self = .sendBlockHeader
-        case "REQUEST_BLOCK_BODY":
+        case "\(Command.requestBlockBody)":
             self = .requestBlockBody
-        case "SEND_BLOCK_BODY":
+        case "\(Command.sendBlockBody)":
             self = .sendBlockBody
         default:
             return nil
         }
     }
-
 }

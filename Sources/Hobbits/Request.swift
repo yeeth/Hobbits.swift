@@ -10,6 +10,27 @@ public struct Request {
     let body: [UInt8]
 }
 
+public extension Request: CustomStringConvertible {
+    public var description: String {
+        var value = "EWP " + version
+            + " " + String(describing: command)
+            + " " + compression
+            + " " + responseCompression.joined(separator: ",")
+            + " " + String(headers.count)
+            + " " + String(body.count)
+
+        if headOnlyIndicator {
+            value += " H"
+        }
+
+        value += "\n"
+        value += String(bytes: headers, encoding: .utf8)!
+        value += String(bytes: body, encoding: .utf8)!
+
+        return value
+    }
+}
+
 public extension Request {
 
     init(serializedData input: String) throws {
