@@ -38,19 +38,19 @@ extension Command {
 
     init?(_ command: String) {
         switch (command) {
-        case Command.hello.description:
+        case "\(Command.hello)":
             self = .hello
-        case Command.requestBlockRoot.description:
+        case "\(Command.requestBlockRoot)":
             self = .requestBlockRoot
-        case Command.sendBlockRoot.description:
+        case "\(Command.sendBlockRoot)":
             self = .sendBlockRoot
-        case Command.requestBlockHeader.description:
+        case "\(Command.requestBlockHeader)":
             self = .requestBlockHeader
-        case Command.sendBlockHeader.description:
+        case "\(Command.sendBlockHeader)":
             self = .sendBlockHeader
-        case Command.requestBlockBody.description:
+        case "\(Command.requestBlockBody)":
             self = .requestBlockBody
-        case Command.sendBlockBody.description:
+        case "\(Command.sendBlockBody)":
             self = .sendBlockBody
         default:
             return nil
