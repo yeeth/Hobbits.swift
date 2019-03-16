@@ -1,5 +1,7 @@
 import Foundation
 
+// @todo remove send*, they aren't commands
+
 enum Command: UInt8 {
     case hello = 0x00
     case requestBlockRoot = 0x10
