@@ -34,7 +34,7 @@ let request = try Request(serializedData: "EWP 0.1 HELLO none none 0 5\n12345")
 
 ## Authors
 
-* **Dean Eigenmann** - [Arachnid](https://github.com/decanus)
+* **Dean Eigenmann** - [decanus](https://github.com/decanus)
 
 See also the list of [contributors](https://github.com/yeeth/Hobbits.swift/contributors) who participated in this project.
 
