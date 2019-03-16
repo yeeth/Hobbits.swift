@@ -13,7 +13,7 @@ public struct Request {
 extension Request: CustomStringConvertible {
     public var description: String {
         var value = "EWP " + version
-            + " " + Command.toString(command: command)
+            + " " + String(describing: command)
             + " " + compression
             + " " + responseCompression.joined(separator: ",")
             + " " + String(headers.count)
