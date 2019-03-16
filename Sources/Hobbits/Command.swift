@@ -12,9 +12,9 @@ public enum Command: UInt8 {
     case sendBlockBody = 0x15
 }
 
-public extension Command: CustomStringConvertible {
+extension Command: CustomStringConvertible {
 
-    var description: String {
+    public var description: String {
         switch self {
         case .hello:
             return "HELLO"
@@ -34,7 +34,7 @@ public extension Command: CustomStringConvertible {
     }
 }
 
-public extension Command {
+extension Command {
 
     init?(_ command: String) {
         switch (command) {

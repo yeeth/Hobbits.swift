@@ -10,7 +10,8 @@ public struct Request {
     let body: [UInt8]
 }
 
-public extension Request: CustomStringConvertible {
+extension Request: CustomStringConvertible {
+
     public var description: String {
         var value = "EWP " + version
             + " " + String(describing: command)
@@ -31,7 +32,7 @@ public extension Request: CustomStringConvertible {
     }
 }
 
-public extension Request {
+extension Request {
 
     init(serializedData input: String) throws {
         var result = input.split(separator: "\n")
