@@ -14,7 +14,7 @@ The `Hobbits.swift` package can be easily imported into your project using the `
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yeeth/Hobbits.swift.git", from: "0.1.0"),
+    .package(url: "https://github.com/yeeth/Hobbits.swift.git", from: "1.0.0"),
 ],
 targets: [
     .target(name: "MyTarget", dependencies: ["Hobbits"]),
@@ -34,7 +34,7 @@ let request = try Request(serializedData: "EWP 0.1 HELLO none none 0 5\n12345")
 
 ## Authors
 
-* **Dean Eigenmann** - [Arachnid](https://github.com/decanus)
+* **Dean Eigenmann** - [decanus](https://github.com/decanus)
 
 See also the list of [contributors](https://github.com/yeeth/Hobbits.swift/contributors) who participated in this project.
 
