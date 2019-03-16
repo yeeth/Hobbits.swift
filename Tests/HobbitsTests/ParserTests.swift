@@ -1,13 +1,13 @@
 import XCTest
 @testable import Hobbits
 
-final class ParserTests: XCTestCase {
+final class RequestTests: XCTestCase {
 
-    func testParse() {
+    func testSerializedDataInit() {
 
         let request = "EWP 0.1 HELLO none none 0 5\n12345"
 
-        let parsed = Parser.parse(input: request)
+        let parsed = try! Request(serializedData: request)
 
         XCTAssertEqual(parsed.version, "0.1")
         XCTAssertEqual(parsed.command, Command.hello)
@@ -19,6 +19,6 @@ final class ParserTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testParse", testParse),
+        ("testSerializedDataInit", testSerializedDataInit),
     ]
 }
