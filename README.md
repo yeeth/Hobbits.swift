@@ -28,7 +28,7 @@ targets: [
 import Hobbits
 
 // Deserialize a request string
-let request = try Request(serializedData: "EWP 0.1 HELLO none none 0 5\n12345")
+let request = try Message(serializedData: "EWP 0.2 RPC none text 0 5\n12345")
 
 ```
 
