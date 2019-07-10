@@ -1,26 +1,17 @@
 import Foundation
 
-struct Message {
+public struct Message {
 
-    let version: String // @todo Version type
+    let version: UInt32 // @todo Version type
     let proto: Protocol
-    let compression: String
-    let encoding: String
-    let headers: [UInt8]
+    let header: [UInt8]
     let body: [UInt8]
 }
 
 extension Message: CustomStringConvertible {
 
-    public var description: String {
-        return "EWP " + version
-            + " " + proto.rawValue
-            + " " + compression
-            + " " + encoding
-            + " " + String(headers.count)
-            + " " + String(body.count)
-            + "\n" + String(bytes: headers, encoding: .utf8)!
-            + String(bytes: body, encoding: .utf8)!
+    public var bytes {
+        
     }
 }
 

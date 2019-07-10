@@ -1,8 +1,9 @@
 import Foundation
 
-enum Protocol: String {
+public enum Protocol: UInt8 {
 
-    case rpc = "RPC"
-    case gossip = "GOSSIP"
+    case rpc
+    case gossip
+    case ping
 
 }
